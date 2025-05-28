@@ -10,4 +10,4 @@ client = meilisearch.Client(
     os.getenv("MEILI_SEARCH_KEY")
     )
 def search(query):
-    return client.index('nasdaq').stock_search(query)
+    return client.index('nasdaq').search(query)
