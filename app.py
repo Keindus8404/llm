@@ -1,7 +1,7 @@
 import streamlit as st
 
 from stock_info import Stock
-from report_service import invesment_report
+from report_service import investment_report
 from search import stock_search
 
 class SearchResult:
