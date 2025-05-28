@@ -40,6 +40,6 @@ with tab2:
     st.header("AI 투자 보고서")
     if st.button("보고서 생성"):
         with st.spinner(text="In progress..."):
-            report = invesment_report(selected.name, selected.symbol)
+            report = investment_report(selected.name, selected.symbol)
             st.success("Done.")
         st.write(report)
