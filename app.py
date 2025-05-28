@@ -2,7 +2,7 @@ import streamlit as st
 
 from stock_info import Stock
 from report_service import investment_report
-from search import search
+from search import stock_search
 
 class SearchResult:
     def __init__(self, item):
@@ -22,7 +22,7 @@ class SearchResult:
 st.title("AI 투자 보고서 생성 서비스")
 
 search_query = st.text_input("회사명", "Apple Inc.")
-hits = search(search_query)['hits']
+hits = stock_search(search_query)['hits']
 search_results = [SearchResult(hit) for hit in hits]
 selected = st.selectbox("검색 결과 리스트", search_results)
 stock = Stock(selected.symbol)
